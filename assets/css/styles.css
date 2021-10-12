@@ -195,27 +195,27 @@ body {
 }
 
 .work {
-	background: url(./assets/img/icon-work.svg), var(--work-color);
+	background: url(/assets/img/icon-work.svg), var(--work-color);
 }
 
 .play {
-	background: url(./assets/img/icon-play.svg), var(--play-color);
+	background: url(/assets/img/icon-play.svg), var(--play-color);
 }
 
 .study {
-	background: url(./assets/img/icon-study.svg), var(--study-color);
+	background: url(/assets/img/icon-study.svg), var(--study-color);
 }
 
 .exercise {
-	background: url(./assets/img/icon-exercise.svg), var(--exercise-color);
+	background: url(/assets/img/icon-exercise.svg), var(--exercise-color);
 }
 
 .social {
-	background: url(./assets/img/icon-social.svg), var(--social-color);
+	background: url(/assets/img/icon-social.svg), var(--social-color);
 }
 
 .self-care {
-	background: url(./assets/img/icon-self-care.svg), var(--self-care-color);
+	background: url(/assets/img/icon-self-care.svg), var(--self-care-color);
 }
 
 .work,
