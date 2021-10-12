@@ -18,7 +18,7 @@ function loadData(data) {
 			<div class="card ${card.title.toLowerCase().split(' ').join('-')} activities__content">
 				<div class="activities__details card__inside">
 					<div class="activities__details-top flex">
-						<div class="activities__name" id="activities-title-work">${card.title}</div>
+						<div class="activities__name">${card.title}</div>
 						<div class="three-dots flex">
 							<span></span>
 							<span></span>
@@ -26,8 +26,8 @@ function loadData(data) {
 						</div>
 					</div>
 					<div class="activities__details-bottom flex">
-						<p class="activities__current" id="activities-current">${card.timeframes.daily.current}hrs</p >
-						<p class="activities__previous" id="activities-last">Yesterday - <span class="previous">${card.timeframes.daily.previous}hrs</span></p>
+						<p class="activities__current">${card.timeframes.daily.current}hrs</p >
+						<p class="activities__previous">Yesterday - <span class="previous">${card.timeframes.daily.previous}hrs</span></p>
 					</div >
 				</div>
 			</div>
