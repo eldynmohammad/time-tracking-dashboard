@@ -60,7 +60,7 @@ body {
 .container {
 	max-width: 960px;
 	padding: 2rem 1.75rem;
-	gap: 1.5rem;
+	gap: 1.25rem;
 }
 
 .card {
@@ -236,6 +236,17 @@ body {
 		height: 100%;
 		align-items: center;
 		grid-auto-flow: row;
+		gap: 0;
+	}
+
+	.profile {
+		height: 100%;
+	}
+
+	.profile__content {
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1;
 	}
 	
 	.profile__periodical {
@@ -255,6 +266,7 @@ body {
 		top: 50%;
 		transform: translateY(-50%);
 		height: max-content;
+		gap: 1.25rem;
 	}
 	
 	.profile {
@@ -288,12 +300,6 @@ body {
 	.container {
 		grid-template-columns: 1fr 3fr;
 		grid-auto-flow: column;
-	}
-
-	.profile__content {
-		flex-direction: column;
-		align-items: flex-start;
-		flex: 1;
 	}
 	
 	.profile__periodical {
