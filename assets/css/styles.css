@@ -1,0 +1,304 @@
+/* ==================== Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/* ==================== Variables ==================== */
+:root {
+	/* ---------- Colors ---------- */
+	/* Main colors  */
+	--blue: hsl(246, 80%, 60%);
+	--play-color: hsl(195, 74%, 62%);
+	--work-color: hsl(15, 100%, 70%);
+	--study-color: hsl(348, 100%, 68%);
+	--exercise-color: hsl(145, 58%, 55%);
+	--social-color: hsl(264, 64%, 52%);
+	--self-care-color: hsl(43, 84%, 65%);
+
+	--text-color-lighter: hsl(246, 20%, 99%);
+	--text-color: hsl(246, 20%, 99%, .5);
+
+	/* Bg colors */
+	--dark-blue: hsl(235, 46%, 20%);
+	--very-dark-blue: hsl(226, 43%, 10%);
+	--desaturated-blue: hsl(235, 45%, 61%);
+	--pale-blue: hsl(236, 100%, 87%);
+
+	/* ---------- Typography ---------- */
+	--rubik: 'Rubik', sans-serif;
+	--fosi: 1.125rem; /* 18px */
+}
+
+/* ==================== Base ==================== */
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: var(--very-dark-blue);
+	color: var(--text-color-lighter);
+	font-family: var(--rubik);
+	font-weight: 400;
+}
+
+.grid {
+	display: grid;
+}
+
+.flex {
+	display: flex;
+}
+
+/* ==================== Layout ==================== */
+.container {
+	max-width: 960px;
+	padding: 2rem 1.75rem;
+	gap: 1.5rem;
+}
+
+.card {
+	position: relative;
+	border-radius: 1rem;
+	background-color: var(--dark-blue);
+	overflow: hidden;
+}
+
+/* ==================== Card's content ==================== */
+.card__inside {
+	position: relative;
+	border-radius: .9rem;
+	padding: 2rem;
+	background-color: var(--blue);
+	align-items: center;
+	gap: 1.25rem;
+	transition: .3s;
+}
+
+/* ---------- Profile ---------- */
+.profile {
+	flex-direction: column;
+}
+
+.profile__photo {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background-color: white;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile__photo-img {
+	width: 64px;
+	height: 64px;
+}
+
+.profile__report {
+	font-size: .9rem;
+	color: var(--text-color);
+	margin-bottom: .5rem;
+}
+
+.profile__name {
+	font-weight: 300;
+	font-size: 1.5rem;
+}
+
+.profile__periodical {
+	justify-content: space-between;
+	padding: 1.5rem 2rem;
+}
+
+.profile__periodical-text {
+	color: var(--text-color);
+	font-size: .938rem;
+	transition: .3s;
+}
+
+.profile__periodical-text:hover {
+	color: white
+}
+
+.active-text {
+	color: var(--text-color-lighter);
+}
+
+/* ---------- Acivities ---------- */
+.activities {
+	gap: 1.25rem;
+}
+
+.activities__content {
+	padding-top: 2.5rem;
+}
+
+.activities__content > .card__inside {
+	background-color: var(--dark-blue);
+	padding: 1.5rem;
+	flex: 1;
+	cursor: pointer;
+}
+
+.activities__content > .card__inside:hover {
+	--dark-blue: hsl(250, 46%, 35%)
+}
+
+.activities__details-top,
+.activities__details-bottom {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.activities__details-top {
+	margin-bottom: .5rem;
+}
+
+.three-dots {
+	gap: .25rem;
+	padding: .5rem 0 .5rem .5rem;
+}
+
+.three-dots span {
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: var(--text-color);
+	transition: .3s;
+}
+
+.three-dots:hover span {
+	background-color: var(--text-color-lighter);
+}
+
+.activities__name {
+	font-weight: 500;
+}
+
+.activities__current {
+	font-weight: 300;
+	font-size: 1.75rem;
+	color: var(--text-color-lighter);
+}
+
+.activities__previous {
+	color: var(--text-color);
+	font-size: .831rem;
+	text-align: right;
+}
+
+.work {
+	background: url(/assets/img/icon-work.svg), var(--work-color);
+}
+
+.play {
+	background: url(/assets/img/icon-play.svg), var(--play-color);
+}
+
+.study {
+	background: url(/assets/img/icon-study.svg), var(--study-color);
+}
+
+.exercise {
+	background: url(/assets/img/icon-exercise.svg), var(--exercise-color);
+}
+
+.social {
+	background: url(/assets/img/icon-social.svg), var(--social-color);
+}
+
+.self-care {
+	background: url(/assets/img/icon-self-care.svg), var(--self-care-color);
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care {
+	background-repeat: no-repeat;
+	background-size: 70px auto;
+	background-position: top -5px right 1rem;
+}
+
+/* ==================== Media Queries ==================== */
+/* small */
+@media screen and (min-width: 576px) {
+	.container {
+		height: 100%;
+		align-items: center;
+		grid-auto-flow: row;
+	}
+	
+	.profile__periodical {
+		justify-content: space-around;
+	}
+
+	.activities {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+	.container {
+		margin: auto;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		height: max-content;
+	}
+	
+	.profile {
+		height: 100%;
+	}
+	
+	.profile__periodical {
+		justify-content: space-evenly;
+	}
+
+	.activities {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.activities__details-top {
+		margin-bottom: 1rem;
+	}
+	
+	.activities__details-bottom {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.activities__current {
+		font-size: 2.25rem;
+	}
+}
+
+/* Large */
+@media screen and (min-width: 840px) {
+	.container {
+		grid-template-columns: 1fr 3fr;
+		grid-auto-flow: column;
+	}
+
+	.profile__content {
+		flex-direction: column;
+		align-items: flex-start;
+		flex: 1;
+	}
+	
+	.profile__periodical {
+		flex-direction: column;
+		gap: 1rem;
+		justify-content: center;
+	}
+}
