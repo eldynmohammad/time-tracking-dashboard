@@ -65,7 +65,7 @@ function linkAction() {
 					</div>
 					<div class="activities__details-bottom flex">
 						<p class="activities__current">${a == 'daily' ? `${card.timeframes.daily.current}hrs` : a == 'weekly' ? `${card.timeframes.weekly.current}hrs` : `${card.timeframes.monthly.current}hrs`}</p >
-						<p class="activities__previous" id="activities-last">${a == 'daily' ? 'Yesterday' : a == 'weekly' ? 'Last Week' : 'Last Month'} - <span class="previous">${a == 'daily' ? `${card.timeframes.daily.previous}hrs` : a == 'weekly' ? `${card.timeframes.weekly.previous}hrs` : `${card.timeframes.monthly.previous}hrs`}</span></p>
+						<p class="activities__previous">${a == 'daily' ? 'Yesterday' : a == 'weekly' ? 'Last Week' : 'Last Month'} - <span class="previous">${a == 'daily' ? `${card.timeframes.daily.previous}hrs` : a == 'weekly' ? `${card.timeframes.weekly.previous}hrs` : `${card.timeframes.monthly.previous}hrs`}</span></p>
 					</div >
 				</div>
 			</div>
